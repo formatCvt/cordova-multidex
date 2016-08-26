@@ -3,6 +3,13 @@ android {
         // Enabling multidex support.
         multiDexEnabled true
     }
+    
+    dexOptions {
+        incremental true
+        // Fix java.lang.OutOfMemoryError: GC overhead limit exceeded
+        javaMaxHeapSize "4g"
+    }
+
 }
 
 dependencies {
